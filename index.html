@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="NayaraPérez">
+    <title>Taco Palace</title>
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="barra">
+            <div class="logo_libro">
+                <img src="static/img/Logo_libro.png" alt="Logo">
+                <h1>Biblioteca<span class="texto_azul"> <br>Horizonte</span></h1>
+            </div>
+
+            <div class="login_Libros_Seleccion">
+                <div class="barra_busqueda">
+                    <input type="text" id="usuario" placeholder="Email">
+                    <button class="boton_azul">Ingresar</button>
+                </div>
+                <div class="Libros_Seleccion_0">
+                    <img src="static/img/Libros_seleccionados.png" alt="LibrosSeleccionados">
+                    <p>Libros <br> seleccionados:</p>
+                    <span>0</span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Categorías superiores -->
+        <nav class="seccion_arriba">
+            <ul>
+                <li class="Generos_libros">
+                    <img src="static/img/Imágenes/enchiladas.jpg" alt="novelas">
+                    <p>Novelas</p>
+                </li>
+                <li class="Generos_libros">
+                    <img src="static/img/Imágenes/tacos.jpg" alt="Ciencia">
+                    <p>Ciencia</p>
+                </li>
+                <li class="Generos_libros">
+                    <img src="static/img/Imágenes/flautas.jpg" alt="Historia">
+                    <p>Historia</p>
+                </li>
+                <li class="Generos_libros">
+                    <img src="static/img/Imágenes/gorditas.jpg" alt="Tecnologia">
+                    <p>Tecnologia</p>
+                </li>
+                <li class="Generos_libros">
+                    <img src="static/img/Imágenes/tostadas.jpg" alt="Arte">
+                    <p>Arte</p>
+                </li>
+                <li class="Generos_libros">
+                    <img src="static/img/Imágenes/enfrijoladas.jpg" alt="Infantil">
+                    <p>Infantil</p>
+                </li>
+            </ul>
+        </nav>
+
+        <section class="seccion_intermedia">
+            <!--izquierdo -->
+            <section class="section_izquerda">
+                <div class="texto_grande">
+                    <h2>
+                        La mejor<br>
+                        variedad en<br>
+                        platillos de<br>
+                        comida<br>
+                        <span class="texto_negrita">mexicana</span>
+                    </h2>
+                    <p>
+                        Contamos con<br>
+                        <a href="#">servicio</a> a<br>
+                        <span class="texto_naranja">domicilio</span>
+                    </p>
+                </div>
+                <img src="static/img/Imágenes/comida-mexicana.jpg" alt="Comida Mexicana">
+            </section>
+
+            <!-- Recomendados derecho -->
+            <section class="section_derecha">
+                <h3>Recomendados:</h3>
+
+                <div class="caja">
+                    <img src="static/img/Imágenes/orden-tacos.jpg" alt="Orden de Tacos">
+                    <div class="caja_parrafo_inferior">
+                        <div>
+                            <p>Orden de Tacos</p>
+                            <a href="#">Ver Más...</a>
+                        </div>
+                        <button class="Mas">+</button>
+                    </div>
+                </div>
+
+                <div class="caja">
+                    <img src="static/img/Imágenes/orden-flautas.jpg" alt="Orden de Flautas">
+                    <div class="caja_parrafo_inferior">
+                        <div>
+                            <p>Orden de Flautas</p>
+                            <a href="#">Ver Más...</a>
+                        </div>
+                        <button class="Mas">+</button>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <script src="static/js/script.js"></script>
+</body>
+
+</html>
