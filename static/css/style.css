@@ -111,7 +111,7 @@ header {
 
 /* ================= CONTENEDOR PRINCIPAL ================= */
 main {
-    padding: 15px 150px;
+    padding: 15px 100px;
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -170,7 +170,7 @@ main {
     background-color: #bebebe;
     display: flex;
     align-items: center;
-    padding: 25px 30px;
+    padding: 45px 30px;
     gap: 20px;
     overflow: hidden;
     flex-wrap: wrap;
@@ -188,6 +188,7 @@ main {
 
 .texto_grande h2 .texto_negrita {
     font-size: 30px;
+
 }
 
 .texto_grande p {
@@ -226,24 +227,25 @@ main {
     border: 1px solid #cccccc;
     background-color: #ffffff;
     display: flex;
-    flex-direction: column;
 }
 .imagen_texto{
     display: flex;
-     height: 100px;
+     height: 65px;
+     width: 50%;
 }
 
 .caja img {
-    width: 50%;
-    height: 100px;
+
     object-fit: cover;
 }
 
 .caja_parrafo_inferior {
+    flex-direction: column;
+    width: 50%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 6px 10px;
+    padding: 8px 10px;
     background-color: #ffffff;
 }
 
