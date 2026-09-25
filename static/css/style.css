@@ -17,55 +17,61 @@ header {
 }
 
 .barra {
-    height: 75px;
+    min-height: 75px;       /* Usa min-height para que crezca si el contenido baja */
+    height: auto;           /* Permite adaptar la altura automáticamente */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2px 10px;
-    flex-wrap: wrap;
+    padding: 10px 20px;
+    gap: 15px;
 }
 
 .logo_libro {
     display: flex;
-    gap: 6px;
-}
-
-.logo_libro img {
-    height: 80px;
-    width: auto;
-}
-
-.logo_libro h1 {
-    font-size: 20px;
-    color: #000000;
+    align-items: center;
+    gap: 10px;
 }
 
 .texto_azul {
     color: #285CA2;
     font-size: 25px;
+
+}
+
+.logo_libro img {
+    height: 45px;          /* Un tamaño proporcional para que no fuerce la altura */
+    width: auto;
+}
+
+.logo_libro h1 {
+    font-size: 18px;
+    line-height: 1.1;
+    margin: 0;
 }
 
 .login_Libros_Seleccion {
     display: flex;
+    align-items: center;
     gap: 15px;
-    flex-wrap: wrap;
+    flex-wrap: wrap;       /* Si se acomoda abajo, no se saldrá del header */
 }
 
 .barra_busqueda {
-    gap: 2px;
     display: flex;
     align-items: center;
+    gap: 5px;
 }
 
 .barra_busqueda input {
     border: 1px solid #000000;
-    padding: 2px 6px;
+    padding: 2px 8px;
     font-size: 11px;
     height: 30px;
-    width: 140px;
-    color: #777676;
+    width: 130px;
     border-radius: 3px;
+    box-sizing: border-box;
 }
+
 
 .boton_azul {
     border-radius: 3px;
@@ -83,24 +89,25 @@ header {
 
 .Libros_Seleccion_0 {
     display: flex;
-    gap: 4px;
-       align-items: end;
- 
+    align-items: center;
+    gap: 8px;
 }
 
 .Libros_Seleccion_0 img {
     height: 36px;
-       
-    width: auto;
 }
 
 .Libros_Seleccion_0 p {
-    
+    margin: 0;
     font-size: 12px;
-    color: #000000;
+    gap: 10px;
+    display: flex;
 }
 
-
+.Libros_Seleccion_0 span {
+    font-weight: bold;
+    margin-top: 14px;
+}
 
 /* ================= CONTENEDOR PRINCIPAL ================= */
 main {
@@ -111,35 +118,44 @@ main {
 }
 
 /* Menú de categorías superior */
-.seccion_arriba {
-    background-color: #fee8c6;
-    padding: 10px 20px;
-}
-
 .seccion_arriba ul {
+    background-color: #D1DCE7;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    gap: 20px;               
+    list-style: none;
+    padding: 16px;
+    margin: 0;
     flex-wrap: wrap;
 }
 
+
 .Generos_libros {
+    flex: 1;              
+    background-color: #EEF2F6;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 4px;
+    justify-content: center;
+    padding: 12px 8px;
+    height: 80px;               
+    box-sizing: border-box;
 }
+
 
 .Generos_libros img {
-    width: 115px;
-    height: 95px;
+    height: 35px;
+    width: auto;
+    margin-bottom: 6px;
 }
+
 
 .Generos_libros p {
-    font-size: 11px;
+    font-size: 13px;
     color: #111111;
+    margin: 0;
+    text-align: center;
+    font-weight: 500;
 }
-
 /* ================= SECCIÓN INTERMEDIA ================= */
 .seccion_intermedia {
     display: flex;
@@ -150,7 +166,6 @@ main {
 
 /* Izquierda */
 .section_izquerda {
-    /* Mantenemos tu base */
     flex: 2.3;
     background-color: #bebebe;
     display: flex;
@@ -158,12 +173,12 @@ main {
     padding: 25px 30px;
     gap: 20px;
     overflow: hidden;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
 }
 
 .texto_grande {
     flex: 1;
-    text-align: center;
+
 }
 
 .texto_grande h2 {
@@ -186,12 +201,13 @@ main {
 }
 
 .section_izquerda img {
-    flex: 1 1 250px; /* Permite encogerse y define un ancho mínimo flexible */
+    flex: 1 1 250px;
+    /* Permite encogerse y define un ancho mínimo flexible */
     width: 100%;
     max-width: 100%;
     height: auto;
     max-height: 350px;
-    object-fit: cover; 
+    object-fit: cover;
 }
 
 /* Columna Derecha  */
@@ -199,13 +215,11 @@ main {
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 12px;
 }
 
 .section_derecha h3 {
     font-size: 22px;
     color: #000000;
-    text-align: center;
 }
 
 .caja {
@@ -214,10 +228,14 @@ main {
     display: flex;
     flex-direction: column;
 }
+.imagen_texto{
+    display: flex;
+     height: 100px;
+}
 
 .caja img {
-    width: 100%;
-    height: 120px;
+    width: 50%;
+    height: 100px;
     object-fit: cover;
 }
 
@@ -241,8 +259,8 @@ main {
 
 .Mas {
     cursor: pointer;
-    width: 20px;
-    height: 20px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     border: none;
     background-color: #fc6600;

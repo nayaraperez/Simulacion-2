@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 1. AUMENTAR CONTADOR DEL CARRITO (+1)
     const botonesMas = document.querySelectorAll('.Mas');
-    const contadorCarrito = document.querySelector('.carrito_cero span');
+    const contadorCarrito = document.querySelector('.Libros_Seleccion_0 span');
     let cantidad = 0;
 
     botonesMas.forEach(boton => {
