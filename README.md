@@ -48,3 +48,9 @@ El proyecto Biblioteca Horizonte es una plataforma web desarrollada para la visu
 1. Mantener la estructura de carpetas (`static/css/`, `static/js/`, `static/images/`, `static/video/`)[cite: 1, 2, 3].
 2. Abrir el archivo `index.html` en cualquier navegador web moderno[cite: 1].
 3. Probar las interacciones del campo de correo, el contador de libros y la reproducción del video[cite: 3].
+
+---
+
+## Información del Autor
+* **Autor:** Nayara Pérez
+* **Correo electrónico:** nayaraperez@liceovvh.cl
