@@ -1,47 +1,57 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // 1. AUMENTAR CONTADOR DEL CARRITO (+1)
-    const botonesMas = document.querySelectorAll('.Mas');
-    const contadorCarrito = document.querySelector('.Libros_Seleccion_0 span');
-    let cantidad = 0;
+    // ============================================================
+    // INDICACIÓN 1: Al hacer click en "Ingresar", mostrar alerta con el correo
+    // ============================================================
+    const botonIngresar = document.querySelector('.boton_azul');
+    const inputUsuario = document.getElementById('usuario');
 
-    botonesMas.forEach(boton => {
+    if (botonIngresar && inputUsuario) {
+        botonIngresar.addEventListener('click', (e) => {
+            e.preventDefault();
+            const correo = inputUsuario.value.trim();
+
+            if (correo !== '') {
+                alert(`Bienvenido\n${correo}`);
+            } else {
+                alert('Por favor, ingresa un correo electrónico.');
+            }
+        });
+    }
+
+    // ============================================================
+    // INDICACIÓN 2: Al hacer click en "+", sumar 1 al contador
+    // ============================================================
+    const botonesMas = document.querySelectorAll('.Mas');
+    const contadorSpan = document.querySelector('.Libros_Seleccion_0 span');
+
+    botonesMas.forEach((boton) => {
         boton.addEventListener('click', () => {
-            cantidad++;
-            contadorCarrito.textContent = cantidad;
+            if (contadorSpan) {
+                let cantidadActual = parseInt(contadorSpan.textContent, 10) || 0;
+                contadorSpan.textContent = cantidadActual + 1;
+            }
         });
     });
 
-    // 2. ALERTA DE LOGIN
-const inputEmail = document.getElementById('usuario');
-    const botonLogin = document.querySelector('.boton_naranja');
+    // ============================================================
+    // INDICACIÓN 3: Al pasar el cursor sobre el video, cambiar miniatura/fuente
+    // ============================================================
+    const videoElement = document.querySelector('.contenedor_video video');
 
-    botonLogin.addEventListener('click', () => {
-        const correo = inputEmail.value.trim();
+    if (videoElement) {
+        const videoOriginal = videoElement.src;
+        // Ruta del archivo alternativo (puedes cambiar esta ruta por tu imagen o video deseado)
+        const recursoAlternativo = videoElement.dataset.hover || 'static/images/cuadrado.png';
 
-        if (correo === '') {
-            alert('Por favor, ingresa un correo electrónico.');
-        } else {
-            alert(`Bienveni@: ${correo}`);
-            inputEmail.value = '';
-        }
-    });
+        videoElement.addEventListener('mouseenter', () => {
+            videoElement.src = recursoAlternativo;
+        });
 
-    // 3. CAMBIAR IMAGEN AL PASAR EL CURSOR (HOVER)
-    const imagenBanner = document.querySelector('.section_izquerda img');
-    const imagenOriginal = imagenBanner.src;
-
-
-
-    // Cambia a 'comida-mexicana2.jpg' al pasar el cursor por la imagen del banner
-    const imagenSecundaria = 'static/img/Imágenes/comida-mexicana2.jpg';
-
-    imagenBanner.addEventListener('mouseenter', () => {
-        imagenBanner.src = imagenSecundaria;
-    });
-
-    imagenBanner.addEventListener('mouseleave', () => {
-        imagenBanner.src = imagenOriginal;
-    });
+        videoElement.addEventListener('mouseleave', () => {
+            videoElement.src = videoOriginal;
+            videoElement.play();
+        });
+    }
 
 });
