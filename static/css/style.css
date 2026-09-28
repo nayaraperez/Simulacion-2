@@ -149,7 +149,7 @@ main {
 }
 
 .Generos_libros img {
-    height: 32px;
+    height: 50px;
     width: auto;
     margin-bottom: 6px;
 }
@@ -182,7 +182,7 @@ main {
     display: flex;
     align-items: center;
     padding: 35px 30px;
-    gap: 25px;
+
     overflow: hidden;
     flex-wrap: wrap;
     box-sizing: border-box;
