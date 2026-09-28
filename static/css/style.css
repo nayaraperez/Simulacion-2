@@ -1,8 +1,11 @@
+/* ==========================================
+   CONFIGURACIÓN GENERAL
+   ================================---------- */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: arial, sans-serif;
+    font-family: Arial, sans-serif;
 }
 
 body {
@@ -10,15 +13,17 @@ body {
     color: #000000;
 }
 
-/* ================= HEADER ================= */
+/* ==========================================
+   ESTILOS DEL ENCABEZADO (HEADER)
+   ================================---------- */
 header {
     border-bottom: 1px solid #e0e0e0;
     background-color: #ffffff;
 }
 
 .barra {
-    min-height: 75px;       /* Usa min-height para que crezca si el contenido baja */
-    height: auto;           /* Permite adaptar la altura automáticamente */
+    min-height: 75px;
+    height: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -26,20 +31,15 @@ header {
     gap: 15px;
 }
 
+/* Logo y Título de la Biblioteca */
 .logo_libro {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-.texto_azul {
-    color: #285CA2;
-    font-size: 25px;
-
-}
-
 .logo_libro img {
-    height: 45px;          /* Un tamaño proporcional para que no fuerce la altura */
+    height: 45px;
     width: auto;
 }
 
@@ -49,11 +49,17 @@ header {
     margin: 0;
 }
 
+.texto_azul {
+    color: #285CA2;
+    font-size: 25px;
+}
+
+/* Sección de Login y Contador de Libros */
 .login_Libros_Seleccion {
     display: flex;
     align-items: center;
     gap: 15px;
-    flex-wrap: wrap;       /* Si se acomoda abajo, no se saldrá del header */
+    flex-wrap: wrap;
 }
 
 .barra_busqueda {
@@ -72,7 +78,6 @@ header {
     box-sizing: border-box;
 }
 
-
 .boton_azul {
     border-radius: 3px;
     height: 30px;
@@ -84,9 +89,7 @@ header {
     cursor: pointer;
 }
 
-
-
-
+/* Contador de Libros Seleccionados */
 .Libros_Seleccion_0 {
     display: flex;
     align-items: center;
@@ -100,16 +103,18 @@ header {
 .Libros_Seleccion_0 p {
     margin: 0;
     font-size: 12px;
-    gap: 10px;
     display: flex;
+    flex-direction: column;
 }
 
 .Libros_Seleccion_0 span {
     font-weight: bold;
-    margin-top: 14px;
+    margin-top: 2px;
 }
 
-/* ================= CONTENEDOR PRINCIPAL ================= */
+/* ==========================================
+   CONTENEDOR PRINCIPAL (MAIN)
+   ================================---------- */
 main {
     padding: 15px 100px;
     display: flex;
@@ -117,37 +122,35 @@ main {
     gap: 15px;
 }
 
-/* Menú de categorías superior */
+/* ==========================================
+   MENÚ DE CATEGORÍAS (SECCIÓN SUPERIOR)
+   ================================---------- */
 .seccion_arriba ul {
     background-color: #D1DCE7;
     display: flex;
-    gap: 20px;               
-    list-style: none;
+    gap: 20px;
     padding: 16px;
     margin: 0;
+    list-style: none;
     flex-wrap: wrap;
 }
 
-
 .Generos_libros {
-    flex: 1;              
+    flex: 1;
     background-color: #EEF2F6;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 12px 8px;
-    height: 80px;               
-    box-sizing: border-box;
+    height: 80px;
 }
-
 
 .Generos_libros img {
     height: 35px;
     width: auto;
     margin-bottom: 6px;
 }
-
 
 .Generos_libros p {
     font-size: 13px;
@@ -156,7 +159,10 @@ main {
     text-align: center;
     font-weight: 500;
 }
-/* ================= SECCIÓN INTERMEDIA ================= */
+
+/* ==========================================
+   SECCIÓN INTERMEDIA 
+   ================================---------- */
 .seccion_intermedia {
     display: flex;
     gap: 20px;
@@ -164,7 +170,7 @@ main {
     flex-wrap: wrap;
 }
 
-/* Izquierda */
+/* Columna Izquierda (Banner principal con video) */
 .section_izquerda {
     flex: 2.3;
     background-color: #bebebe;
@@ -178,17 +184,11 @@ main {
 
 .texto_grande {
     flex: 1;
-
 }
 
 .texto_grande h2 {
     font-size: 28px;
     color: #000000;
-}
-
-.texto_grande h2 .texto_negrita {
-    font-size: 30px;
-
 }
 
 .texto_grande p {
@@ -197,84 +197,97 @@ main {
     margin-top: 20px;
 }
 
-.texto_grande p a {
-    color: #000000;
-}
-
-.section_izquerda img {
+.section_izquerda video {
     flex: 1 1 250px;
-    /* Permite encogerse y define un ancho mínimo flexible */
     width: 100%;
     max-width: 100%;
-    height: auto;
-    max-height: 350px;
+    height: 100px;
+    max-height: 450px;
     object-fit: cover;
 }
 
-/* Columna Derecha  */
+/* Columna Derecha (Lista de Libros Recomendados) */
 .section_derecha {
     flex: 1;
     display: flex;
     flex-direction: column;
+    gap: 15px;
 }
 
 .section_derecha h3 {
-    font-size: 22px;
+    font-size: 20px;
     color: #000000;
+    margin-bottom: 5px;
 }
 
+/* Estilos de las Tarjetas (Cajas de libros) */
 .caja {
     border: 1px solid #cccccc;
     background-color: #ffffff;
     display: flex;
-}
-.imagen_texto{
-    display: flex;
-     height: 65px;
-     width: 50%;
+    align-items: center;
+    padding: 12px;
+    gap: 15px;
+    border-radius: 4px;
 }
 
-.caja img {
-
+.caja_img {
+    width: 80px;
+    height: 80px;
     object-fit: cover;
+    flex-shrink: 0;
 }
 
-.caja_parrafo_inferior {
+.caja_contenido {
+    display: flex;
     flex-direction: column;
-    width: 50%;
+    justify-content: space-between;
+    flex: 1;
+    height: 80px;
+}
+
+.caja_info h4 {
+    font-size: 15px;
+    font-weight: bold;
+    color: #000000;
+    margin: 0 0 2px 0;
+}
+
+.caja_info p {
+    font-size: 13px;
+    color: #666666;
+    margin: 0;
+}
+
+.caja_inferior {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 8px 10px;
-    background-color: #ffffff;
-}
-.texto_inferior{
-    gap: 10px;
-    display: flex;
-    align-items: center;
-justify-content: space-between;
+    width: 100%;
 }
 
-.caja_parrafo_inferior p {
-    font-size: 11px;
-    color: #000000;
+.caja_inferior a {
+    font-size: 13px;
+    color: #285CA2;
+    text-decoration: none;
 }
 
-.caja_parrafo_inferior a {
-    font-size: 11px;
-    color: #4b2c82;
+.caja_inferior a:hover {
+    text-decoration: underline;
 }
 
+/* Botón de Agregar (+) */
 .Mas {
     cursor: pointer;
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     border-radius: 50%;
     border: none;
-    background-color: #fc6600;
+    background-color: #17334C;
     color: #ffffff;
-    font-size: 14px;
+    font-size: 18px;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-weight: bold;
 }

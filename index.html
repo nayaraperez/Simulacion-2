@@ -5,138 +5,129 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="NayaraPérez">
-    <title>Taco Palace</title>
+    <title>Biblioteca Horizonte</title>
     <link rel="stylesheet" href="static/css/style.css">
 </head>
 
 <body>
 
+    <!-- ================= ENCABEZADO ================= -->
     <header>
         <nav class="barra">
+            <!-- Logo y nombre de la biblioteca -->
             <div class="logo_libro">
-                <img src="static/img/Logo_libro.png" alt="Logo">
-                <h1>Biblioteca<span class="texto_azul"> <br>Horizonte</span></h1>
+                <img src="static/images/Logo_libro.png" alt="Logo de la Biblioteca">
+                <h1>Biblioteca<span class="texto_azul"><br>Horizonte</span></h1>
             </div>
 
+            <!-- Acceso y contador de libros -->
             <div class="login_Libros_Seleccion">
                 <div class="barra_busqueda">
                     <input type="text" id="usuario" placeholder="Email">
                     <button class="boton_azul">Ingresar</button>
                 </div>
                 <div class="Libros_Seleccion_0">
-                    <img src="static/img/Libros_seleccionados.png" alt="LibrosSeleccionados">
+                    <img src="static/images/Libros_seleccionados.png" alt="Libros Seleccionados">
                     <p>Libros <br> seleccionados: <span>0</span></p>
                 </div>
+            </div>
         </nav>
     </header>
 
+    <!-- ================= CONTENIDO PRINCIPAL ================= -->
     <main>
-        <!-- Categorías superiores -->
+        <!-- Menú superior de categorías de libros -->
         <section class="seccion_arriba">
             <ul>
                 <li class="Generos_libros">
-                    <img src="static/img/Imágenes/enchiladas.jpg" alt="novelas">
+                    <img src="static/images/img1.png" alt="Novelas">
                     <p>Novelas</p>
                 </li>
                 <li class="Generos_libros">
-                    <img src="static/img/Imágenes/tacos.jpg" alt="Ciencia">
+                    <img src="static/images/img2.png" alt="Ciencia">
                     <p>Ciencia</p>
                 </li>
                 <li class="Generos_libros">
-                    <img src="static/img/Imágenes/flautas.jpg" alt="Historia">
+                    <img src="static/images/img3.png" alt="Historia">
                     <p>Historia</p>
                 </li>
                 <li class="Generos_libros">
-                    <img src="static/img/Imágenes/gorditas.jpg" alt="Tecnologia">
-                    <p>Tecnologia</p>
+                    <img src="static/images/img4.png" alt="Tecnologia">
+                    <p>Tecnología</p>
                 </li>
                 <li class="Generos_libros">
-                    <img src="static/img/Imágenes/tostadas.jpg" alt="Arte">
+                    <img src="static/images/img5.png" alt="Arte">
                     <p>Arte</p>
                 </li>
                 <li class="Generos_libros">
-                    <img src="static/img/Imágenes/enfrijoladas.jpg" alt="Infantil">
+                    <img src="static/images/img6.png" alt="Infantil">
                     <p>Infantil</p>
                 </li>
             </ul>
         </section>
 
+        <!-- Sección intermedia (Banner de bienvenida y Recomendados) -->
         <section class="seccion_intermedia">
-            <!--izquierdo -->
+            
+            <!-- Columna Izquierda: Banner con texto y video -->
             <section class="section_izquerda">
                 <div class="texto_grande">
-                    <h2>
-                        Descubre <br>Nuevas Historias
-
-                    </h2>
-                    <p>
-                    Explora nuestra biblioteca virtual y encuentra libros para todos los gustos.Conocimiento, aventura y mucho más al alcance de un clic.
-                    </p>
+                    <h2>Descubre <br>Nuevas Historias</h2>
+                    <p>Explora nuestra biblioteca virtual y encuentra libros para todos los gustos. Conocimiento, aventura y mucho más al alcance de un clic.</p>
                 </div>
-                <img src="static/img/Imágenes/comida-mexicana.jpg" alt="Comida Mexicana">
+                <video src="video.mp4" autoplay loop muted controls></video>
             </section>
 
-            <!-- Recomendados derecho -->
+            <!-- Columna Derecha: Tarjetas de Libros Recomendados -->
             <section class="section_derecha">
-                <h3>    Libros Recomendados:</h3>
+                <h3>Libros Recomendados:</h3>
 
+                <!-- Caja de Libro 1 -->
                 <div class="caja">
-                    <div class="imagen_texto">
-
-   <img src="static/img/cuadrado-removebg-preview.png" alt="cuadro">
-
-                    </div>
-                    <div class="caja_parrafo_inferior">
-
-                    <div class="imagen_texto">
-                    <p>Orden de Flautas</p>
-                    </div>
-
-                    <div class="texto_inferior">
-                        <div>
-                            <a href="#">Ver Más...</a>
+                    <img src="static/images/cuadrado.png" alt="Portada de libro" class="caja_img">
+                    <div class="caja_contenido">
+                        <div class="caja_info">
+                            <h4>Cien años de soledad</h4>
+                            <p>Gabriel García Márquez</p>
                         </div>
-                        <button class="Mas">+</button>
+                        <div class="caja_inferior">
+                            <a href="#">Ver más...</a>
+                            <button class="Mas">+</button>
                         </div>
                     </div>
-
-                    </div>
-
-
-
                 </div>
 
-
-
-
-
+                <!-- Caja de Libro 2 -->
                 <div class="caja">
-                    <div class="imagen_texto">
-                    <img src="static/img/Imágenes/orden-flautas.jpg" alt="Orden de Flautas">
-                    <p>Orden de Flautas</p>
-                    </div>
-                    <div class="caja_parrafo_inferior">
-
-                        <div>
-                            <a href="#">Ver Más...</a>
+                    <img src="static/images/cuadrado.png" alt="Portada de libro" class="caja_img">
+                    <div class="caja_contenido">
+                        <div class="caja_info">
+                            <h4>Sapiens</h4>
+                            <p>Yuval Noah Harari</p>
                         </div>
-                        <button class="Mas">+</button>
+                        <div class="caja_inferior">
+                            <a href="#">Ver más...</a>
+                            <button class="Mas">+</button>
+                        </div>
                     </div>
                 </div>
-                <div class="caja">
-                    <div class="imagen_texto">
-                    <img src="static/img/Imágenes/orden-flautas.jpg" alt="Orden de Flautas">
-                    <p>Orden de Flautas</p>
-                    </div>
-                    <div class="caja_parrafo_inferior">
 
-                        <div>
-                            <a href="#">Ver Más...</a>
+                <!-- Caja de Libro 3 -->
+                <div class="caja">
+                    <img src="static/images/cuadrado.png" alt="Portada de libro" class="caja_img">
+                    <div class="caja_contenido">
+                        <div class="caja_info">
+                            <h4>El principito</h4>
+                            <p>Antoine de Saint-Exupéry</p>
                         </div>
-                        <button class="Mas">+</button>
+                        <div class="caja_inferior">
+                            <a href="#">Ver más...</a>
+                            <button class="Mas">+</button>
+                        </div>
                     </div>
                 </div>
             </section>
+
         </section>
     </main>
 
