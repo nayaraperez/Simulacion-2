@@ -22,6 +22,9 @@ document.addEventListener('DOMContentLoaded', function () {
         console.log("No se encontró el botón de ingresar o el campo de usuario.");
     }
 
+
+
+    
     // 2. Incrementar el contador de libros al hacer clic en "+"
     const contador = document.querySelector('.Libros_Seleccion_0 span');
     const botonesMas = document.querySelectorAll('.Mas');
@@ -34,6 +37,10 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     });
+
+
+
+
 
     // 3. Cambiar de video al pasar el cursor (hover / mouseover y mouseout)
     const video = document.querySelector('.contenedor_video video');

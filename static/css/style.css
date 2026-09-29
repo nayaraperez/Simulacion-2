@@ -39,6 +39,7 @@ header {
 .logo_libro img {
     height: 45px;
     width: auto;
+
 }
 
 .logo_libro h1 {
@@ -268,6 +269,8 @@ main {
     height: 100px;    
     object-fit: cover;
     flex-shrink: 0;
+      border: #706f6f 1px solid;
+      box-shadow: #535353a9 1px 1px 3px 1px;
 }
 
 .caja_contenido {
