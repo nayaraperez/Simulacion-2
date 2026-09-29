@@ -124,7 +124,7 @@ main {
    ================================---------- */
 .seccion_arriba ul {
     background-color: #D1DCE7;
-    display: flex;
+ display: flex;
     gap: 15px;
     padding: 16px;
     margin: 0;
@@ -134,7 +134,7 @@ main {
 .Generos_libros {
     flex: 1;
     min-width: 100px;
-    background-color: #ffffff; /* Fondo blanco para destacar sobre la barra gris-azul */
+    background-color: #ffffff; 
     border-radius: 3px;
     display: flex;
     flex-direction: column;
@@ -170,7 +170,7 @@ main {
     
 }
 
-/* Columna Izquierda (Banner principal con video) */
+/* Columna Izquierda (texto principal con video) */
 .section_izquerda {
     flex: 2.2;
     min-width: 320px;
@@ -178,7 +178,6 @@ main {
     display: flex;
     align-items: center;
     padding: 35px 30px;
-
     overflow: hidden;
     flex-wrap: wrap;
     box-sizing: border-box;
@@ -265,7 +264,7 @@ main {
 }
 
 .caja img {
-    width: 150px;     
+    width: 60px;     
     height: 100px;    
     object-fit: cover;
     flex-shrink: 0;
